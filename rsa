@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+import sys
+def ars_fun():
+    try:
+        revfile = sys.argv[1]
+        with open(revfile) as f:
+            for revnum in f:
+                revnum = int(revnum)
+                if revnum % 2 == 0:
+                    print("{}={}*{}".format(revnum, revnumber // 2, 2))
+                    continue
+                
+                i = 3
+                while i < revnum // 2 == 0:
+                    if revnum % i ==0:
+                        print("{}={}*{}".format(revnum, revnum // i, i))
+                        break
+                    i = i + 2
+                if i == (revnum // 2 ) + 1:
+                    print("{}={}*{}".format(revnum, revnum, 1))
+    except(IndexError):
+        pass
+
+ars_fun()
