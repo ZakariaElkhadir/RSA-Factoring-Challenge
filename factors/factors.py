@@ -1,7 +1,9 @@
 #!usr/bin/python3
+"""factors Module."""
 import sys
 import time
 def factorize(num):
+    """funtion that factorize"""
     for i in range(2, int(num**0.5)+1):
         if num % i == 0:
             return (i, num//i)
@@ -11,10 +13,10 @@ if __name__ == "__main__":
     if len (sys.argv) != 2:
         print("Usage factors <file>")
         exit()
-    input_file = sys.argv[1]
+    input_f = sys.argv[1]
 
     try:
-        with open(input_file, 'r') as f:
+        with open(input_f, 'r') as f:
             lines = f.readlines()
     except FileNotFoundError:
         print("File not found")
